@@ -1,0 +1,24 @@
+{
+  "name": "qq2-eignung-nodejs-fuer-microservice",
+  "version": "1.0.0",
+  "description": "In diesem Projekt wird die Sprache JavaScript mit dem Framework NodeJS im Rahmen des QQ2-Projekts [Eignung von Programmiersprachen und Frameworks für Microservices](https://blogs.gm.fh-koeln.de/bente/2018/09/24/qq2-projekt-eignung-von-programmiersprachen-und-frameworks-fuer-microservices/) getestet.",
+  "main": "server.js",
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudolfgrauberger/qq2-eignung-nodejs-fuer-microservice.git"
+  },
+  "author": "Rudolf Grauberger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rudolfgrauberger/qq2-eignung-nodejs-fuer-microservice/issues"
+  },
+  "homepage": "https://github.com/rudolfgrauberger/qq2-eignung-nodejs-fuer-microservice#readme"
+}
