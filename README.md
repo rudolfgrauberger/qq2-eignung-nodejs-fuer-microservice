@@ -7,8 +7,22 @@ Dafür werden die nachfolgenden Aufgaben erledigt:
 - 3. REST Schnittstelle (Anlegen/Ändern/Löschen eines neuen Studenten, Ausgeben einer Liste aller Studenten, Ausgeben eines Studenten)
 - 4. Logging (Jede CRUD-Operation über bereitgestellten Apache Kafka (Publish-Subscribe) protokollieren)
 
+## REST-API
+
+| URI  | HTTP-Verb | Request-Body | Beschreibung |
+| ------------- | ------------- | ------------- | ------------- |
+| /students  | GET  |   | Anzeigen aller Studenten |
+| /students/{id}  | GET  |    | Anzeigen eines Studenten |
+| /students | POST | ```{first_name: <string>, last_name: <string>, matriculation_number <integer>, course: <string>, email: <string>}``` | Anlegen eines neuen Studenten |
+| /students/{id} | PATCH | ```{attribute: <new_value>}``` | Ändern eines Studenten |
+| /students/{id} | DELETE | | Löschen eines Studenten |
+
+**Hinweis:** Bei allen anderen Routen wird 404 zurückgeliefert!
+
 ## Online
 Damit das Projekt nicht erst heruntergeladen werden muss, wird der Stand vom ```master```-Branch auf Heroku unter [https://qq2-nodejs.herokuapp.com/](https://qq2-nodejs.herokuapp.com/) gehostet.
+
+Zum Testen bitte die oben in der Tabelle angegebenen Routen aufrufen z. B. [https://qq2-nodejs.herokuapp.com/students](https://qq2-nodejs.herokuapp.com/students) führt ein GET aus und lädt damit alle Studenten.
 
 ## Lokal
 ### Voraussetzung
