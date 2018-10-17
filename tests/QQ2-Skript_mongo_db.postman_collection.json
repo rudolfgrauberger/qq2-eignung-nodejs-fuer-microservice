@@ -1,0 +1,112 @@
+{
+	"variables": [],
+	"info": {
+		"name": "QQ2-Skript",
+		"_postman_id": "398eb148-468b-f8cf-b85c-7508deec3c8d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/students",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setGlobalVariable(\"location-created\", 'localhost:8080' + postman.getResponseHeader(\"Location\") );",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "http://localhost:8080/students",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstname\" :\"Test\" ,\n\t\"lastname\" :\"Student\",\n\t\"matriculation_number\" :\"0000000\",\n\t\"course\" :\"AI\",\n\t\"email\" :\"test@rmal.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/students",
+			"request": {
+				"url": "http://localhost:8080/students",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/students/1",
+			"request": {
+				"url": "{{location-created}}",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"vorname\"  : \"\",\n\t\"nachname\"  : \"\",\n\t\"matrikelnummer\"  : \"\",\n\t\"studiengang\"  : \"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/students/1",
+			"request": {
+				"url": "{{location-created}}",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstname\" :\"\" ,\n\t\"lastname\" :\"\",\n\t\"matriculation_number\" :\"\",\n\t\"course\" :\"\",\n\t\"email\" :\"\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/students/1",
+			"request": {
+				"url": "{{location-created}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -2,22 +2,22 @@ const mongoose = require('mongoose');
 
 // Definiert den Aufbau des Objekts
 const StudentSchema = new mongoose.Schema({
-   Vorname: {
+   first_name: {
       type: String
    },
-   Nachname: {
+   last_name: {
       type: String
    },
-   Matrikelnummer: {
+   matriculation_number: {
       type: Number
    },
-   Studiengang: {
+   course: {
       type: String
    },
-   Semester: {
+   semester: {
       type: Number
    },
-   EMail: {
+   email: {
       type: String
    }
 });

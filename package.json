@@ -22,6 +22,8 @@
   },
   "homepage": "https://github.com/rudolfgrauberger/qq2-eignung-nodejs-fuer-microservice#readme",
   "dependencies": {
-    "mongoose": "^5.3.4"
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.4",
+    "routes": "^2.1.0"
   }
 }

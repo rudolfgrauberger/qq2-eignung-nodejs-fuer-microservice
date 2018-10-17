@@ -13,30 +13,30 @@ const saveStudent = (student) => {
 
 const insertTestData = () => {
    const rudolf = new student.Student({
-      Vorname: 'Rudolf',
-      Nachname: 'Grauberger',
-      Matrikelnummer: 00000001,
-      Studiengang: 'INF',
-      Semester: 5,
-      EMail: 'rudolf.grauberger@example.com'
+      first_name: 'Rudolf',
+      last_name: 'Grauberger',
+      matriculation_number: 00000001,
+      course: 'INF',
+      semester: 5,
+      email: 'rudolf.grauberger@example.com'
    });
    
    const max = new student.Student({
-      Vorname: 'Max',
-      Nachname: 'Mustermann',
-      Matrikelnummer: 00000002,
-      Studiengang: 'MI',
-      Semester: 6,
-      EMail: 'max.mustermann@example.com'
+      first_name: 'Max',
+      last_name: 'Mustermann',
+      matriculation_number: 00000002,
+      course: 'MI',
+      semester: 6,
+      email: 'max.mustermann@example.com'
    });
    
    const peter = new student.Student({
-      Vorname: 'Peter',
-      Nachname: 'Mustermann',
-      Matrikelnummer: 00000003,
-      Studiengang: 'WI',
-      Semester: 3,
-      EMail: 'peter.mustermann@example.com'
+      first_name: 'Peter',
+      last_name: 'Mustermann',
+      matriculation_number: 00000003,
+      course: 'WI',
+      semester: 3,
+      email: 'peter.mustermann@example.com'
    });
 
    saveStudent(rudolf);
@@ -50,6 +50,38 @@ const initDatabase = (connectionString) => {
    insertTestData();
 };
 
+const getAllStudents = () => {
+   return student.Student.find();
+};
+
+const createNewStudent = (newItem) => {
+   return new student.Student({
+      first_name: newItem.first_name,
+      last_name: newItem.last_name,
+      matriculation_number: newItem.matriculation_number,
+      course: newItem.course,
+      semster: newItem.semster,
+      email: newItem.email
+   }).save();
+};
+
+const getStudentByID = (id) => {
+   return student.Student.findById(id);
+};
+
+const deleteStudentByID = (id) => {
+   return student.Student.findByIdAndDelete(id);
+};
+
+const updateById = (id, data, properties) => {
+   return student.Student.findByIdAndUpdate(id, {$set: data}, properties);
+};
+
 module.exports = {
-   initDatabase
+   initDatabase,
+   getAllStudents,
+   createNewStudent,
+   getStudentByID,
+   deleteStudentByID,
+   updateById
 };
