@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/rudolfgrauberger/qq2-eignung-nodejs-fuer-microservice/issues"
   },
-  "homepage": "https://github.com/rudolfgrauberger/qq2-eignung-nodejs-fuer-microservice#readme"
+  "homepage": "https://github.com/rudolfgrauberger/qq2-eignung-nodejs-fuer-microservice#readme",
+  "dependencies": {
+    "mongoose": "^5.3.4"
+  }
 }
