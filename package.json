@@ -24,6 +24,7 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "mongoose": "^5.3.4",
-    "routes": "^2.1.0"
+    "routes": "^2.1.0",
+    "sinek": "^6.23.4"
   }
 }
