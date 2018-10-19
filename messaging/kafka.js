@@ -39,15 +39,18 @@ producer.connect().then((_) => {
    console.log(error);
 });
 
-const createKafkaMessage = (req, res, par) => JSON.stringify({
-   request: req,
-   response: res,
+const createKafkaMessage = (req, par) => JSON.stringify({
+   request: {
+      url: req.url,
+      method: req.method,
+      headers: req.headers
+   },
    params: par
 }, undefined, 3);
 
-const logToKafka = (req, res, par) => {
+const logToKafka = (req, par) => {
    if (connected) {
-      const msg = createKafkaMessage(req, res, par);
+      const msg = createKafkaMessage(req, par);
       producer.send('logging', JSON.stringify({
          service_name: '1_NodeJs_1',
          operation: req.method,
