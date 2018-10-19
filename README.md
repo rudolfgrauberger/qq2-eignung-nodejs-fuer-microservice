@@ -52,3 +52,5 @@ Das geht am einfachsten mit dem nachfolgendem Befehl:
 ```sh
 > npm start
 ```
+
+Danach erreich im Browser unter http://localhost:8080/students die Route für die REST-API.
