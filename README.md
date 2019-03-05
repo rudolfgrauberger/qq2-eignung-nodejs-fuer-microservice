@@ -47,10 +47,10 @@ Mit den nachfolgenden Befehlen wechselt man in das gerade ausgecheckte Verzeichn
 ```
 
 ### Ausführen
-Das geht am einfachsten mit dem nachfolgendem Befehl:
+Das geht am einfachsten mit dem Befehl:
 
 ```sh
 > npm start
 ```
 
-Danach erreich im Browser unter http://localhost:8080/students die Route für die REST-API.
+Danach erreich man im Browser unter http://localhost:8080/students die Route für die REST-API.
